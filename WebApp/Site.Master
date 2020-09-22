@@ -87,6 +87,11 @@
                                         style="color:black" runat="server">
                                    P04 DDL of Tracks using ODS
                                 </a>
+                                <a class="dropdown-item"
+                                        href="~/SamplePages/P05_DDLofArtistsToCGVofAlbumsByArtistId.aspx"
+                                        style="color:black" runat="server">
+                                   P05 DDLofArtistsToCGVofAlbumsByArtistID
+                                </a>
                             </div>
                          </li>
                          <li class="nav-item">
