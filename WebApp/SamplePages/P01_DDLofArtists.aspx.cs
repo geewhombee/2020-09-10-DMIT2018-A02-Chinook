@@ -36,5 +36,18 @@ namespace WebApp.SamplePages
                                     $" SelectedItem:{selecteditem}";
             }
         }
+
+        protected void DisplaySelectedInfo3_Click(object sender, EventArgs e)
+        {
+            {
+                var selectedindex = DDLofArtists3.SelectedIndex;
+                var selectedvalue = DDLofArtists3.SelectedValue;
+                var selecteditem = DDLofArtists3.SelectedItem;
+                MessageLabel.Text = $"SelectedIndex:{selectedindex} " +
+                                    $" SelectedValue:{selectedvalue} " +
+                                    $" SelectedItem:{selecteditem}";
+
+            }
+        }
     }
 }

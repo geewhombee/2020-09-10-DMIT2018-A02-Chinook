@@ -39,6 +39,23 @@
     </div>
     <br /><br />
     <div class="row">
+        <asp:Label ID="Label3" runat="server" Text="Select Artist"></asp:Label>&nbsp;&nbsp;
+        <asp:DropDownList ID="DDLofArtists3" runat="server"
+            DataSourceID="ODS_DDLofArtists"
+            DataTextField="ArtistName"
+            DataValueField="ArtistId"
+            Width="350px"
+            AppendDataBoundItems="True">
+            <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
+        </asp:DropDownList>&nbsp;&nbsp;
+        <asp:LinkButton
+            ID="LinkButton1"
+            runat="server" OnClick="DisplaySelectedInfo3_Click">
+            Display Selected Info 3
+        </asp:LinkButton>
+    </div>
+    <br /><br />
+    <div class="row">
         <asp:Label ID="MessageLabel" runat="server" ></asp:Label>
     </div>
     <asp:ObjectDataSource ID="ODS_DDLofArtists" runat="server"
