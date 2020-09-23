@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using ChinookSystem.VIEWMODELS;
 using ChinookSystem.DAL;
+using ChinookSystem.ENTITIES;
 
 namespace ChinookSystem.BLL
 {
@@ -40,7 +41,55 @@ namespace ChinookSystem.BLL
             }
         }
         #endregion
-        #region comands
+        #region CRUD
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public void Artists_Insert(ArtistViewModel item) 
+        { 
+            using (var context = new ChinookSystemContext())
+            {
+                Artist info = new Artist()
+                {
+                    Name = item.ArtistName
+                };
+                context.Artists.Add(info);
+                context.SaveChanges();
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Update, false)]
+        public void Artists_Update(ArtistViewModel item)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                Artist info = new Artist()
+                {
+                    ArtistId = item.ArtistId,
+                    Name = item.ArtistName
+                };
+                
+                context.Entry(info).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
+        public void Artists_Delete(ArtistViewModel item)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                Artists_Delete(item.ArtistId);
+            }
+        }
+        public void Artists_Delete(int artistid)
+        {
+            using (var context = new ChinookSystemContext())
+            {
+                var existing = context.Artists.Find(artistid);
+                context.Artists.Remove(existing);
+                context.SaveChanges();
+            }
+        }
         #endregion
+       
     }
 }
