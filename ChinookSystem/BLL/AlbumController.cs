@@ -72,24 +72,26 @@ namespace ChinookSystem.BLL
             }
         }
 
-        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        [DataObjectMethod(DataObjectMethodType.Update, false)]
         public void Albums_Update(AlbumViewModel item)
         {
             using (var context = new ChinookSystemContext())
             {
                 Album info = new Album()
                 {
+                    AlbumId = item.AlbumId,
                     Title = item.AlbumTitle,
                     ArtistId = item.ArtistId,
                     ReleaseYear = item.AlbumReleaseYear,
                     ReleaseLabel = item.AlbumReleaseLabel
                 };
+                //problem here, check source code when robbin uploads it
                 context.Entry(info).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
             }
         }
 
-        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
         public void Albums_Delete(AlbumViewModel item)
         {
             using (var context = new ChinookSystemContext())
