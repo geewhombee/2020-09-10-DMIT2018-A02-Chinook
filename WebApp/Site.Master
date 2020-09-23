@@ -97,6 +97,11 @@
                                         style="color:black" runat="server">
                                    P06 Album CRUD
                                 </a>
+                                <a class="dropdown-item"
+                                        href="~/SamplePages/P06_Part2_ArtistCrud.aspx"
+                                        style="color:black" runat="server">
+                                   P06 Part 2 - Artist CRUD
+                                </a>
                             </div>
                          </li>
                          <li class="nav-item">
