@@ -13,7 +13,7 @@
         <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="ObjectDataSource1" DataTextField="ArtistName" DataValueField="ArtistId" AppendDataBoundItems="True">
             <asp:ListItem Value="0">Select...</asp:ListItem>
         </asp:DropDownList>&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" Text="Get Albums from this Artist" />&nbsp;&nbsp;
+        <asp:Button ID="Button1" runat="server" Text="Get Albums from this Artist"  />&nbsp;&nbsp;
     </div>
     <br />
     <div class="row">
