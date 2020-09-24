@@ -195,6 +195,7 @@
     <Content Include="SamplePages\P05_DDLofArtistsToCGVofAlbumsByArtistId.aspx" />
     <Content Include="SamplePages\P06_AlbumCRUD.aspx" />
     <Content Include="SamplePages\P06_Part2_ArtistCrud.aspx" />
+    <Content Include="SamplePages\P07_TrackCrud.aspx" />
     <Content Include="SamplePages\TestPage1.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -518,6 +519,13 @@
     </Compile>
     <Compile Include="SamplePages\P06_Part2_ArtistCrud.aspx.designer.cs">
       <DependentUpon>P06_Part2_ArtistCrud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePages\P07_TrackCrud.aspx.cs">
+      <DependentUpon>P07_TrackCrud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePages\P07_TrackCrud.aspx.designer.cs">
+      <DependentUpon>P07_TrackCrud.aspx</DependentUpon>
     </Compile>
     <Compile Include="SamplePages\TestPage1.aspx.cs">
       <DependentUpon>TestPage1.aspx</DependentUpon>
