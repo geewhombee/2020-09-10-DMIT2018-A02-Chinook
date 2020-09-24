@@ -38,7 +38,7 @@ namespace ChinookSystem.BLL
                                   UnitPrice = x.UnitPrice
                                   
                               };
-                return results.OrderBy(x => x.Name).ToList();
+                return results.OrderBy(x => x.TrackId).ToList();
             }
         }
         #endregion
